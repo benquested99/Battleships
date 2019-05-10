@@ -37,6 +37,7 @@
     <PrepareForRunDependsOn>$(PrepareForRunDependsOn);CopyLibsToOut</PrepareForRunDependsOn>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="src\AIEasyPlayer.cs" />
     <Compile Include="src\AIHardPlayer.cs" />
     <Compile Include="src\AIMediumPlayer.cs" />
     <Compile Include="src\AIOption.cs" />
