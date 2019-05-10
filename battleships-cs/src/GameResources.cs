@@ -187,11 +187,11 @@ public static class GameResources
     /// </remarks>
 	private static void PlaySwinGameIntro()
 	{
-		const int ANI_X = 143;
-		const int ANI_Y = 134;
-		const int ANI_W = 546;
-		const int ANI_H = 327;
-		const int ANI_V_CELL_COUNT = 6;
+		//const int ANI_X = 143;
+		//const int ANI_Y = 134;
+		//const int ANI_W = 546;
+		//const int ANI_H = 327;
+		//const int ANI_V_CELL_COUNT = 6;
 		const int ANI_CELL_COUNT = 11;
 
 		Audio.PlaySoundEffect(_StartSound);
