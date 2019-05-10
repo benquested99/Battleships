@@ -183,23 +183,29 @@ public class Player : IEnumerable<Ship>
 	{
 		AttackResult result = default(AttackResult);
 		result = EnemyGrid.HitTile(row, col);
-		//if the tile is already shot the shot counter won't increment
-        	if (result.Value != ResultOfAttack.ShotAlready)
-        	{
-            		_shots += 1;
+        //if the tile is already shot the shot counter won't increment
+        
 
-            		switch (result.Value) {
-                		case ResultOfAttack.Destroyed:
-	                	case ResultOfAttack.Hit:
-        	            		_hits += 1;
-	                    		break;
-	                	case ResultOfAttack.Miss:
-	                    		_misses += 1;
-			                break;
-	            	}
-        	}
+        if (result.Value != ResultOfAttack.ShotAlready)
+        {
 
-		return result;
+            _shots += 1;
+
+            switch (result.Value)
+            {
+                case ResultOfAttack.Destroyed:
+                case ResultOfAttack.Hit:
+                    _hits += 1;
+                    break;
+                case ResultOfAttack.Miss:
+                    _misses += 1;
+                    break;
+            }
+
+
+        }
+
+        return result;
 	}
 
 	public virtual void RandomizeDeployment()
